@@ -1,0 +1,29 @@
+
+len_pswd = ask user how long they want password - store in variable 
+
+ask user how many passwords - store in variable 
+
+create func password_gen(len_pswd):
+
+    pssword 
+
+    stringOfAlphaNumericChars 
+
+    for _ in len_pswd:
+
+        create_rndm_no 
+
+        append stringOfAlphaNumericChars[create_rndm_no] to 
+
+    return pssword
+
+create func multiple_pswds(no_pswds):
+
+    pswds = []
+
+    for _ in no_pswds:
+
+       append password_gen(len_pswd) to pswds
+
+       return pswds
+
