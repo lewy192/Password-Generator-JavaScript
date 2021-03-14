@@ -26,12 +26,13 @@ function passwordLengthFn(){
 
 // defines a function which will decide what characterset the password gen will use
 function genCharSet(){
-
+  // using confirms so the users only have 2 choices, and they return a bool
   var useSpecialCharacters = confirm("Would you like to use special characters?");
   var useNumbers = confirm("Would you like to use numbers in your new password?");
   var useUppercaseAlpha = confirm("Would you like to use uppercase in your password?");
   var useLowercaseAlpha = confirm("would you like to use lowercase in your password");
-  
+  // following if statements check if any of the confirms are True
+    // if any are true the coresponding character string is added to the characterpool
   if (useSpecialCharacters) {
     characterPool += specialChars;
   }
@@ -45,32 +46,37 @@ function genCharSet(){
     characterPool += lowercaseAlpha;
   }
   if (characterPool === ''){
-    console.log("here")
+
+    // if the characterPool is empty alert the user and recusrsively call the fucntion to try again
     alert("You haven't chosen any specs for your password characters")
     genCharSet();
   }
-  
+  // otherwise return the characterpool to be used elsewhere
   return characterPool
 }
 
 function generatePassword() {
+  // assigns the parameters set by the user to local variables
   var passwordLen = passwordLengthFn();
   var charSet = genCharSet();
-  
+  // creates a variable of an empty string
   var generatedPassword = "";
 
   for(var i = 0; i < passwordLen; i ++) {
+    // for every number from 0 up to the length of the password
+      // create a random number between 0 and passwordLen
     var randomIndex = Math.floor(Math.random() * charSet.length);
+      // use the random number to index the character pool string and add the indexed character, using the addition assignment opperator, to the local variable generatedPassword
     generatedPassword += charSet[randomIndex];
-    // index the value and append to new password
   };
-  console.log(i)
-  console.log(generatedPassword);
-  return generatedPassword;
-};
 
+  // console.log(generatedPassword); was used for testing
+  // spitsd out 
+  return generatedPassword; 
+};
+// an event listener is attatched to the button
 generateBtn.addEventListener('click', function(){
   var textToReplace = document.querySelector("#password");
-  
+  // when clicked replace the text in the tag with an id of password to the generated password
   textToReplace.value = generatePassword();
 })
