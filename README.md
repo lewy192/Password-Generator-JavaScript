@@ -35,3 +35,9 @@ THEN the password is either displayed in an alert or written to the page
 ## Live Version
 
 ## Change Log
+
+## Acknowledgements
+
+ - [Converting Strings to Number in Javascript: Pitfalls](https://coderwall.com/p/5tlhmw/converting-strings-to-number-in-javascript-pitfalls)
+ - [String concat javascript](https://web.archive.org/web/20170404182053/https://jsperf.com/concat-vs-plus-vs-join)
+ 
