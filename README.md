@@ -57,7 +57,7 @@ Both Psuedocode files were used before i wrote the script.js file. They are main
 ![Screenshot of product with generated password 10 characters long and full characterset in use](./images/Screenshot.png)
 ## Live Version
 
-[Here](ttps://lewy192.github.io/Password-Generator-JavaScript/) you will find the live deployed version thanks to GitHub Pages.
+[Here](https://lewy192.github.io/Password-Generator-JavaScript/) you will find the live deployed version thanks to GitHub Pages.
 
 ## Acknowledgements
  - [General Research](https://www.w3schools.com/)
